@@ -39,6 +39,7 @@ class EmailRequest(BaseModel):
     email_text: str
 
 class ScanResult(BaseModel):
+    cleaned_text: str
     id: str
     timestamp: str
     email_preview: str
@@ -166,6 +167,7 @@ def analyze_email(request: EmailRequest):
         "id": str(uuid.uuid4()),
         "timestamp": datetime.now().isoformat(),
         "email_preview": email_text[:120] + ("..." if len(email_text) > 120 else ""),
+        "cleaned_text": cleaned,
         "prediction": pred,
         "confidence": round(confidence, 4),
         "risk_score": round(risk_score, 4),
