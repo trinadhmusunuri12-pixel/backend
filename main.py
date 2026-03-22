@@ -51,7 +51,19 @@ class ScanResult(BaseModel):
 # ---- Helpers ----
 def clean_text(text: str) -> str:
     text = text.lower()
-    text = re.sub(r"http\S+", "", text)
+
+    # Extract domain words from URLs instead of removing them entirely.
+    # e.g. "https://paypal-secure-login.com/verify" -> "paypal secure login com verify"
+    # http:// (no SSL) also injects "httplink" as an extra phishing signal word.
+    def expand_url(match):
+        url = match.group(0)
+        prefix = "httplink " if url.startswith("http://") else ""
+        url = re.sub(r"https?://", "", url)
+        parts = re.split(r"[^a-z0-9]+", url)
+        words = " ".join(p for p in parts if p and len(p) > 1)
+        return prefix + words
+
+    text = re.sub(r"https?://\S+", expand_url, text)
     text = re.sub(r"[^a-z\s]", "", text)
     return text
 
@@ -70,6 +82,7 @@ PHISHING_KEYWORDS = {
     "winner": "Prize/winner announcements are common phishing tactics.",
     "free": "Unsolicited free offers are a phishing red flag.",
     "prize": "Lottery/prize claims are common phishing tactics.",
+    "httplink": "Email contains an insecure HTTP link (no SSL) — a common phishing indicator.",
 }
 
 def generate_recommendations(exp_list, email_text: str, pred: int) -> List[str]:
@@ -83,6 +96,9 @@ def generate_recommendations(exp_list, email_text: str, pred: int) -> List[str]:
             rec.add(f"⚠ '{key}' detected: {msg}")
     if pred == 1:
         rec.add("🚨 Strong phishing signal. Do NOT click links or share personal info.")
+    # Check for http links specifically
+    if re.search(r"http://", email_text, re.IGNORECASE):
+        rec.add("⚠ Insecure HTTP link detected — legitimate emails use HTTPS.")
     return list(rec)
 
 def predict_proba_fn(texts):
@@ -113,6 +129,11 @@ def analyze_email(request: EmailRequest):
         raise HTTPException(status_code=400, detail="Email text cannot be empty.")
 
     cleaned = clean_text(email_text)
+
+    # Guard: if cleaning leaves nothing (e.g. input was only punctuation)
+    if not cleaned.strip():
+        raise HTTPException(status_code=400, detail="Email has no analyzable text after cleaning.")
+
     vec = vectorizer.transform([cleaned])
 
     pred = int(model.predict(vec)[0])
@@ -123,7 +144,6 @@ def analyze_email(request: EmailRequest):
     # LIME explanation — score as many words as possible
     explainer = LimeTextExplainer(class_names=["Safe", "Phishing"])
 
-    # num_features = number of unique tokens in the cleaned email (min 20, max 60)
     tokens = [t for t in cleaned.split() if len(t) > 1]
     num_features = max(20, min(len(tokens), 60))
 
@@ -131,7 +151,7 @@ def analyze_email(request: EmailRequest):
         cleaned,
         predict_proba_fn,
         num_features=num_features,
-        num_samples=1000,          # more samples = more stable scores
+        num_samples=1000,
     )
     exp_list = exp.as_list()
 
