@@ -1,0 +1,206 @@
+{
+  "ect": {
+    "message": "The word 'ect' appears frequently in phishing emails \u2014 treat with caution.",
+    "shap_score": 0.05901
+  },
+  "enron": {
+    "message": "The word 'enron' appears frequently in phishing emails \u2014 treat with caution.",
+    "shap_score": 0.05122
+  },
+  "language": {
+    "message": "The word 'language' appears frequently in phishing emails \u2014 treat with caution.",
+    "shap_score": 0.03242
+  },
+  "linguistics": {
+    "message": "The word 'linguistics' appears frequently in phishing emails \u2014 treat with caution.",
+    "shap_score": 0.0198
+  },
+  "university": {
+    "message": "The word 'university' appears frequently in phishing emails \u2014 treat with caution.",
+    "shap_score": 0.01625
+  },
+  "languages": {
+    "message": "The word 'languages' appears frequently in phishing emails \u2014 treat with caution.",
+    "shap_score": 0.01452
+  },
+  "hou": {
+    "message": "The word 'hou' appears frequently in phishing emails \u2014 treat with caution.",
+    "shap_score": 0.01436
+  },
+  "mmbtu": {
+    "message": "The word 'mmbtu' appears frequently in phishing emails \u2014 treat with caution.",
+    "shap_score": 0.01021
+  },
+  "vince": {
+    "message": "The word 'vince' appears frequently in phishing emails \u2014 treat with caution.",
+    "shap_score": 0.00851
+  },
+  "free": {
+    "message": "Unsolicited free offers are a red flag for phishing.",
+    "shap_score": 0.00783
+  },
+  "site": {
+    "message": "The word 'site' appears frequently in phishing emails \u2014 treat with caution.",
+    "shap_score": 0.00756
+  },
+  "edu": {
+    "message": "The word 'edu' appears frequently in phishing emails \u2014 treat with caution.",
+    "shap_score": 0.00749
+  },
+  "april": {
+    "message": "The word 'april' appears frequently in phishing emails \u2014 treat with caution.",
+    "shap_score": 0.00715
+  },
+  "work": {
+    "message": "The word 'work' appears frequently in phishing emails \u2014 treat with caution.",
+    "shap_score": 0.00652
+  },
+  "low": {
+    "message": "The word 'low' appears frequently in phishing emails \u2014 treat with caution.",
+    "shap_score": 0.00615
+  },
+  "hourahead": {
+    "message": "The word 'hourahead' appears frequently in phishing emails \u2014 treat with caution.",
+    "shap_score": 0.0061
+  },
+  "receive": {
+    "message": "The word 'receive' appears frequently in phishing emails \u2014 treat with caution.",
+    "shap_score": 0.00608
+  },
+  "best": {
+    "message": "The word 'best' appears frequently in phishing emails \u2014 treat with caution.",
+    "shap_score": 0.00601
+  },
+  "like": {
+    "message": "The word 'like' appears frequently in phishing emails \u2014 treat with caution.",
+    "shap_score": 0.00584
+  },
+  "thanks": {
+    "message": "The word 'thanks' appears frequently in phishing emails \u2014 treat with caution.",
+    "shap_score": 0.00581
+  },
+  "account": {
+    "message": "Threats about account suspension are used to create panic.",
+    "shap_score": 0.00546
+  },
+  "sally": {
+    "message": "The word 'sally' appears frequently in phishing emails \u2014 treat with caution.",
+    "shap_score": 0.00523
+  },
+  "perl": {
+    "message": "The word 'perl' appears frequently in phishing emails \u2014 treat with caution.",
+    "shap_score": 0.00479
+  },
+  "word": {
+    "message": "The word 'word' appears frequently in phishing emails \u2014 treat with caution.",
+    "shap_score": 0.00465
+  },
+  "think": {
+    "message": "The word 'think' appears frequently in phishing emails \u2014 treat with caution.",
+    "shap_score": 0.00463
+  },
+  "business": {
+    "message": "The word 'business' appears frequently in phishing emails \u2014 treat with caution.",
+    "shap_score": 0.00446
+  },
+  "revised": {
+    "message": "The word 'revised' appears frequently in phishing emails \u2014 treat with caution.",
+    "shap_score": 0.00424
+  },
+  "california": {
+    "message": "The word 'california' appears frequently in phishing emails \u2014 treat with caution.",
+    "shap_score": 0.00394
+  },
+  "blackberry": {
+    "message": "The word 'blackberry' appears frequently in phishing emails \u2014 treat with caution.",
+    "shap_score": 0.00391
+  },
+  "bank": {
+    "message": "Impersonating banks is one of the most common phishing techniques.",
+    "shap_score": 0.00389
+  },
+  "life": {
+    "message": "The word 'life' appears frequently in phishing emails \u2014 treat with caution.",
+    "shap_score": 0.00387
+  },
+  "spreadsheet": {
+    "message": "The word 'spreadsheet' appears frequently in phishing emails \u2014 treat with caution.",
+    "shap_score": 0.00368
+  },
+  "attached": {
+    "message": "The word 'attached' appears frequently in phishing emails \u2014 treat with caution.",
+    "shap_score": 0.00364
+  },
+  "schedules": {
+    "message": "The word 'schedules' appears frequently in phishing emails \u2014 treat with caution.",
+    "shap_score": 0.00355
+  },
+  "investment": {
+    "message": "The word 'investment' appears frequently in phishing emails \u2014 treat with caution.",
+    "shap_score": 0.00338
+  },
+  "linguistic": {
+    "message": "The word 'linguistic' appears frequently in phishing emails \u2014 treat with caution.",
+    "shap_score": 0.00335
+  },
+  "remove": {
+    "message": "The word 'remove' appears frequently in phishing emails \u2014 treat with caution.",
+    "shap_score": 0.00335
+  },
+  "references": {
+    "message": "The word 'references' appears frequently in phishing emails \u2014 treat with caution.",
+    "shap_score": 0.00333
+  },
+  "company": {
+    "message": "The word 'company' appears frequently in phishing emails \u2014 treat with caution.",
+    "shap_score": 0.00329
+  },
+  "july": {
+    "message": "The word 'july' appears frequently in phishing emails \u2014 treat with caution.",
+    "shap_score": 0.00329
+  },
+  "syntax": {
+    "message": "The word 'syntax' appears frequently in phishing emails \u2014 treat with caution.",
+    "shap_score": 0.00326
+  },
+  "schedule": {
+    "message": "The word 'schedule' appears frequently in phishing emails \u2014 treat with caution.",
+    "shap_score": 0.00324
+  },
+  "papers": {
+    "message": "The word 'papers' appears frequently in phishing emails \u2014 treat with caution.",
+    "shap_score": 0.00318
+  },
+  "march": {
+    "message": "The word 'march' appears frequently in phishing emails \u2014 treat with caution.",
+    "shap_score": 0.00317
+  },
+  "website": {
+    "message": "The word 'website' appears frequently in phishing emails \u2014 treat with caution.",
+    "shap_score": 0.00316
+  },
+  "health": {
+    "message": "The word 'health' appears frequently in phishing emails \u2014 treat with caution.",
+    "shap_score": 0.00313
+  },
+  "kaminski": {
+    "message": "The word 'kaminski' appears frequently in phishing emails \u2014 treat with caution.",
+    "shap_score": 0.00311
+  },
+  "dose": {
+    "message": "The word 'dose' appears frequently in phishing emails \u2014 treat with caution.",
+    "shap_score": 0.00301
+  },
+  "risk": {
+    "message": "The word 'risk' appears frequently in phishing emails \u2014 treat with caution.",
+    "shap_score": 0.00301
+  },
+  "thank": {
+    "message": "The word 'thank' appears frequently in phishing emails \u2014 treat with caution.",
+    "shap_score": 0.00297
+  },
+  "httplink": {
+    "message": "Email contains an insecure HTTP link (no SSL) \u2014 legitimate emails use HTTPS.",
+    "shap_score": 0.0
+  }
+}
